@@ -1,0 +1,349 @@
+html,
+body {
+  background-color: black;
+  margin: 0;
+  height: 100%;
+}
+
+#loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #85caf5;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top: calc(50vh - 60px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#videoContainer {
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  z-index: 1;
+
+  animation: dissolve 1s 1;
+  animation-play-state: paused;
+}
+
+iframe {
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+rect,
+circle,
+.hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+circle {
+  /*animation: flashing 2s infinite;*/
+}
+
+@keyframes flashing {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes dissolve {
+  from {opacity: 100;}
+
+  to {opacity: 0;}
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+#mobileContainer{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+img {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100vw;
+  height: auto;
+}
+
+#backArrow, #productImg {
+  display: inline;
+  height: 15px;
+  width: auto;
+  z-index: 50;
+}
+
+@media screen and (min-width: 721px) {
+ #backArrow, #productImg {
+    height: 1.5vh;
+  } 
+}
+
+#backButton, #productButton {
+  display: inline;
+  font-size: 16px;
+  color: #fff;
+  font-family: helvetica;
+}
+
+#backNavigation{
+  position: absolute;
+  left: 3vw;
+  top: 20px;
+  z-index: 50;
+  height: 1vh;
+  width: auto;
+}
+#productNavigation{
+  position: absolute;
+  right: 3vw;
+  top: 20px;
+  z-index: 50;
+  height: 1vh;
+  width: auto;
+}
+
+@media screen and (min-width: 721px) {
+  #backNavigation{
+    position: fixed;
+    left: 3vw;
+    bottom: 10vh;
+    z-index: 50;
+  }
+  #productNavigation{
+    position: fixed;
+    right: 3vw;
+    bottom: 10vh;
+    z-index: 50;
+  } 
+}
+
+#backNavigation:hover, #productNavigation:hover{
+  cursor: pointer;
+}
+
+p{
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 721px) {
+  #mobileContainer {
+    display: none;
+  }
+  html {
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width: 720px) {
+  #backgroundSVG {
+    display: none;
+  }
+
+  #backButton, #productButton {
+    display: inline;
+    font-size: 16px;
+    color: #fff;
+    font-family: helvetica;
+  }
+
+  #navAlt {
+    visibility: hidden;
+  }
+}
+
+.svgButton {
+  /*animation: .75s 1 shrink;
+  animation-fill-mode:forwards;*/
+  max-width: 110px;
+  height: auto;
+  transform-origin: 50% 50%;
+  transition: transform 0.8s ease-in-out;
+  display: none;
+}
+
+
+
+@media (min-width: 721px) {
+ .svgButton {
+  display: block;
+} 
+}
+
+@media (min-width: 980px) {
+ .svgButton {
+  max-width: 180px;
+} 
+}
+
+.svgButton:hover {
+  cursor: pointer;
+  transform: translate(10px,7px) scale(1.07);
+  /*animation: .75s 1 grow;*/
+  /*animation-fill-mode:forwards;*/
+}
+
+@keyframes grow {
+  from {
+    width: 12vw;
+    height: auto;
+  }
+  to {
+    width: 13vw;
+    height: auto;
+  }
+}
+
+@keyframes shrink {
+  from {
+    width: 13vw;
+    height: auto;
+  }
+  to {
+    width: 12vw;
+    height: auto;
+  }
+
+}
+
+#exitButton {
+  position: fixed;
+  right: 2.5vw;
+  top: 3vh;
+  z-index: 1000;
+  height: 3vw;
+  width: auto;
+  /*display: none !important;*/
+}
+
+#popUp:hover {
+  cursor: pointer;
+  /*animation: 1s 1 fadeIn;
+  animation-fill-mode:forwards;*/
+  transform: scale(1.1);
+  opacity: 1;
+}
+#popUp {
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+  /*animation: 1s 1 fadeOut;
+  animation-fill-mode:forwards;*/
+}
+
+@keyframes fadeIn {
+  from {
+    width: 13vw;
+    height: auto;
+  }
+  to {
+    width: 14vw;
+    height: auto;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    width: 14vw;
+    height: auto;
+  }
+  to {
+    width: 13vw;
+    height: auto;
+  }
+}
+
+.bodyGaurdzMobile {
+  background-color: #4aa0c1;
+  padding: 50px 30px;
+}
+
+.bodyGaurdzMobile img {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+#brandContainer {
+  position: relative;
+}
+
+#navAlt {
+  position: absolute;
+  bottom: auto;
+  right: auto;
+  top: 15px;
+  left: auto;
+  margin: 0 auto;
+  z-index: 99;
+  display: flex;
+  max-width: 350px;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 721px) {
+  #navAlt {
+    bottom: 15px;
+    right: 5vw;
+    top: auto;
+    left: auto;
+    margin: 0;
+  }
+}
+
+#ImgLibBtn,
+#PresBtn {
+  display: inline;
+  font-size: 16px;
+  color: #fff;
+  font-family: helvetica;
+  cursor: pointer;
+}
+
+#navDivider {
+  height: 15px;
+  width: 2px;
+  background-color: #fff;
+  margin: 0 3vw;
+}
+
+#videoContainer {
+  position: relative;
+  padding-bottom: 100vh;
+  height: 0;
+}
+#videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

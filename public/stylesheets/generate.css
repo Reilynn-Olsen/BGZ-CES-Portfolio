@@ -1,0 +1,46 @@
+#form {
+  margin-left: 33vw;
+}
+
+#label {
+  display: block;
+  margin-top: 5vh;
+  font-size: large;
+}
+#emailText {
+  margin-bottom: 2vh;
+  display: block;
+  padding: 10px;
+  font-size: large;
+  width: 30vw;
+}
+
+#submit {
+  display: block;
+  background: black;
+  color: white;
+  border-style: outset;
+  border-color: black;
+  height: 50px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow: none;
+  border-radius: 5px;
+  width: 31.75vw;
+}
+
+#flashError {
+  margin-left: 33vw;
+  background-color: tomato;
+  display: block;
+  color: black;
+  border-style: solid;
+  height: 50px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow: none;
+  border-radius: 10px;
+  width: 31.75vw;
+  text-align: center;
+  margin-top: 10vh;
+}

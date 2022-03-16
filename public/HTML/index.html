@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+    <title>BGZ Brands CES 2022</title>
+  </head>
+  <body>
+    <svg
+      viewBox="0 0 1920 1080"
+      id="landingPageSVG"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <image
+        id="landingPage"
+        width="100%"
+        height="100%"
+        href="images/landing_page.jpg"
+      />
+      <rect
+        class="hover"
+        x="0"
+        y="92"
+        opacity="0"
+        width="640"
+        height="988"
+        data-selection="moxyo"
+        data-video="rUWxSEwctFU"
+      />
+      <rect
+        x="640"
+        y="92"
+        opacity="0"
+        width="640"
+        height="988"
+        data-selection="bodyguardz"
+        data-video="1QzT8dBh4tI"
+      />
+      <rect
+        x="1280"
+        y="92"
+        opacity="0"
+        width="640"
+        height="988"
+        data-selection="lander"
+        data-video="v2XZxoUGPvY"
+      />
+    </svg>
+
+    <div id="videoContainer" class="hidden">
+      <div id="loader" class="hidden"></div>
+      <div id="player" class="hidden"></div>
+    </div>
+
+    <div id="brandContainer">
+      <svg 
+        class='hidden'
+        viewBox="0 0 1920 1080"
+        id="backgroundSVG"
+        xmlns="http://www.w3.org/2000/svg"
+      ></svg>
+      <div class='hidden' id='nav'>
+        <div id='backNavigation' >
+          <img src='images/navigationIcons/backArrow.png' id='backArrow'>
+          <p id="backButton">GO BACK</p>
+        </div>
+
+        <div id='productNavigation'>
+          <a id="productButton">
+          <img src='images/navigationIcons/productInfoIcon.png' id='productImg'>
+          <p>PRODUCT INFO</p></a>
+        </div>
+    </div>
+
+    <div class='hide' id='navAlt'>
+        <div id='ImgLibNav'>
+          <p id="ImgLibBtn">Image Library</p>
+        </div>
+        <div id="navDivider"></div>
+        <div id='PresNav'>
+          <a id="PresBtn">
+          <p>Presentation</p></a>
+        </div>
+    </div>
+    </div>
+
+    <script src="javascripts/frontEnd.js"></script>
+  </body>
+</html>

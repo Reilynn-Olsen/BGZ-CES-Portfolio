@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email codes</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/generate.css">
+</head>
+<body>
+  <% errors.forEach(function (error) { %>
+  <div id='flashError'>
+
+        <p><%= error %></p>       
+
+    </div>
+    <% }) %>
+
+  <form method='post' action="/generateAccessToken" id='form'>
+    <label id='label' for="emailText">Email:</label>
+    <input name='email' type='email' id ='emailText'/>
+    <input type='submit' id = submit value='Send Email' />
+  </form>
+</body>
+</html>
